@@ -1,5 +1,13 @@
 -- Creation of Student table with columns id , Name, Stream, Roll_no. Id must be auto incremented and should start from 100. roll_num cannot be null.
 
+CREATE TABLE STUDENTS (
+	ID NUMBER(5) AUTO_INCREMENT = 100, 
+	NAME VARCHAR(20),
+	STREAM VARCHAR(20),
+	ROLL_NO NUMBER(10) NOT NULL,
+	PRIMARY KEY(ID)
+);
+  
 -- Insertion of data
 
 INSERT INTO STUDENTS (NAME, STREAM, ROLL_NO) VALUES('Sushma', 'CSE', 31367325);
