@@ -21,6 +21,6 @@ ALTER TABLE STUDENTS
   
 -- Change the name of any student to john.
 
-UPDATE TABLE STUDNETS
+UPDATE TABLE STUDENTS
   SET NAME = 'John'
   WHERE ID = 100;
