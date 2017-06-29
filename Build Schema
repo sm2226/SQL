@@ -1,18 +1,21 @@
 -- Creation of Student table with columns id , Name, Stream, Roll_no. Id must be auto incremented and should start from 100. roll_num cannot be null.
 
-CREATE TABLE STUDENTS (
-	ID NUMBER(5) IDENTITY(100,1) AUTO_INCREMENT, 
-  NAME VARCHAR(255), 
-  STREAM VARCHAR(255), 		
-  ROLL_NO NUMBER(10) NOT NULL
-  PRIMARY KEY(ID)
-);
-  
 -- Insertion of data
 
-INSERT INTO STUDENTS VALUES(100, 'Sushma', 'CSE', 31367325);
-INSERT INTO STUDENTS VALUES(100, 'Bharat', 'BIO', 31367325);
-INSERT INTO STUDENTS VALUES(100, 'Anil', 'IT', 31367325);
-INSERT INTO STUDENTS VALUES(100, 'Swetha', 'CSE', 31367325);
-INSERT INTO STUDENTS VALUES(100, 'Revathi', 'ECE', 31367325);
+INSERT INTO STUDENTS (NAME, STREAM, ROLL_NO) VALUES('Sushma', 'CSE', 31367325);
+INSERT INTO STUDENTS (NAME, STREAM, ROLL_NO) VALUES('Bharat', 'BIO', 31367325);
+INSERT INTO STUDENTS (NAME, STREAM, ROLL_NO) VALUES('Anil', 'IT', 31367325);
+INSERT INTO STUDENTS (NAME, STREAM, ROLL_NO) VALUES('Swetha', 'CSE', 31367325);
+INSERT INTO STUDENTS (NAME, STREAM, ROLL_NO) VALUES('Revathi', 'ECE', 31367325);
+
+
+-- Create another table account with columns id, fees_due, total_fee,status. Here “status” column shows if fee is paid or not.Also status cannot be null.
   
+CREATE TABLE ACCOUNT (
+	ID NUMBER(5),
+  	FEES_DUE NUMBER(10,10);
+	TOTAL_FEE NUMBER(20,20);
+	STATUS VARCHAR2(10) NOT NULL,
+	FOREIGN KEY(ID) REFERENCES STUDENTS(ID)
+);
+
