@@ -12,7 +12,7 @@ SELECT * FROM STUDENTS WHERE STREAM = 'CSE' ;
 
 -- select all those student's name, roll_no where stream is ec & cs.
 
-SELECT NAME, ROLL_NO FROM STUDENTS WHERE STREAM = 'CSE' AND STREAM = 'ECE' ;
+SELECT NAME, ROLL_NO FROM STUDENTS WHERE STREAM = 'CSE' OR STREAM = 'ECE' ;
 
 -- Add a new column dob to the table student.
 
@@ -21,6 +21,6 @@ ALTER TABLE STUDENTS
   
 -- Change the name of any student to john.
 
-UPDATE TABLE STUDENTS
+UPDATE STUDENTS
   SET NAME = 'John'
   WHERE ID = 100;
