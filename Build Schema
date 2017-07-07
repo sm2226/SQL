@@ -1,12 +1,16 @@
 -- Creation of Student table with columns id , Name, Stream, Roll_no. Id must be auto incremented and should start from 100. roll_num cannot be null.
 
 CREATE TABLE STUDENTS (
-	ID NUMBER(5) AUTO_INCREMENT = 100, 
+	ID NUMBER(5) AUTO_INCREMENT, 
 	NAME VARCHAR(20),
 	STREAM VARCHAR(20),
 	ROLL_NO NUMBER(10) NOT NULL,
 	PRIMARY KEY(ID)
 );
+
+-- Auto Increment starts from 100
+
+ALTER TABLE STUDENTS AUTO_INCREMENT = 100;
   
 -- Insertion of data
 
@@ -20,10 +24,10 @@ INSERT INTO STUDENTS (NAME, STREAM, ROLL_NO) VALUES('Revathi', 'ECE', 31367325);
 -- Create another table account with columns id, fees_due, total_fee,status. Here “status” column shows if fee is paid or not.Also status cannot be null.
   
 CREATE TABLE ACCOUNT (
-	ID NUMBER(5),
-  	FEES_DUE NUMBER(10,10);
-	TOTAL_FEE NUMBER(20,20);
-	STATUS VARCHAR2(10) NOT NULL,
+	ID INTEGER(5),
+  	FEES_DUE INTEGER(15,5);
+	TOTAL_FEE INTEGER(15,5);
+	STATUS VARCHAR(10) NOT NULL,
 	FOREIGN KEY(ID) REFERENCES STUDENTS(ID)
 );
 
